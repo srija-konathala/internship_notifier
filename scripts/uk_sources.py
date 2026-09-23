@@ -211,7 +211,9 @@ UK_SOURCES: list[dict] = [
     _startup("OVO Energy", **_gh("ovoenergy")),
     _startup("ElevenLabs", **_ashby("elevenlabs")),
     _startup("Synthesia", **_ashby("synthesia")),
-    _startup("Tilt", **_ashby("tilthq")),
+    # Ashby board "tilthq" belongs to an unrelated US fintech; the London live
+    # shopping startup is "tilt".
+    _startup("Tilt", **_ashby("tilt")),
     _startup("Legora", **_ashby("legora")),
     _startup("Lovable", **_ashby("lovable")),
     _startup("Granola", **_ashby("granola")),
