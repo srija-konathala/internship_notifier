@@ -1,5 +1,7 @@
 {
   "poll_interval_seconds": 180,
+  "fetch_workers": 10,
+  "prime_new_sources": true,
   "title_keywords": [
     "intern",
     "internship",
@@ -22,9 +24,183 @@
     "ios developer",
     "android developer"
   ],
+  "keyword_profiles": {
+    "uk_early_career": [
+      "intern",
+      "internship",
+      "placement",
+      "industrial placement",
+      "year in industry",
+      "summer analyst",
+      "summer associate",
+      "spring week",
+      "spring insight",
+      "insight programme",
+      "insight program",
+      "graduate scheme",
+      "graduate programme",
+      "graduate program",
+      "student",
+      "campus",
+      "apprentice",
+      "penultimate year"
+    ],
+    "startup_early_career": [
+      "intern",
+      "internship",
+      "placement",
+      "industrial placement",
+      "year in industry",
+      "summer analyst",
+      "summer associate",
+      "spring week",
+      "spring insight",
+      "insight programme",
+      "insight program",
+      "graduate scheme",
+      "graduate programme",
+      "graduate program",
+      "student",
+      "campus",
+      "apprentice",
+      "penultimate year",
+      "junior",
+      "new grad",
+      "entry level",
+      "entry-level",
+      "trainee",
+      "associate",
+      "first job"
+    ]
+  },
+  "role_profiles": {
+    "default": {
+      "require_any": [
+        "software",
+        "swe",
+        "developer",
+        "programmer",
+        "backend",
+        "back end",
+        "frontend",
+        "front end",
+        "full stack",
+        "fullstack",
+        "computer science",
+        "web developer",
+        "mobile developer",
+        "ios developer",
+        "android developer"
+      ]
+    },
+    "uk_technical": {
+      "require_any": [
+        "software",
+        "swe",
+        "developer",
+        "programmer",
+        "backend",
+        "back end",
+        "frontend",
+        "front end",
+        "full stack",
+        "fullstack",
+        "computer science",
+        "web developer",
+        "mobile developer",
+        "ios developer",
+        "android developer",
+        "engineer",
+        "engineering",
+        "technology",
+        "technical",
+        "data",
+        "machine learning",
+        "artificial intelligence",
+        " ai ",
+        "quantitative",
+        "quant",
+        "research",
+        "analyst",
+        "analytics",
+        "cyber",
+        "security",
+        "digital",
+        "it ",
+        "informatics",
+        "robotics",
+        "systems",
+        "cloud",
+        "platform"
+      ]
+    },
+    "startup": {
+      "require_any": [
+        "software",
+        "swe",
+        "developer",
+        "programmer",
+        "backend",
+        "back end",
+        "frontend",
+        "front end",
+        "full stack",
+        "fullstack",
+        "computer science",
+        "web developer",
+        "mobile developer",
+        "ios developer",
+        "android developer",
+        "engineer",
+        "engineering",
+        "product",
+        "growth",
+        "data",
+        "analyst",
+        "operations",
+        "ops",
+        "business",
+        "strategy",
+        "design",
+        "marketing",
+        "founder",
+        "chief of staff",
+        "generalist",
+        "research"
+      ],
+      "allow_vague": true,
+      "exclude_any": [
+        "senior",
+        "staff ",
+        "principal",
+        "head of",
+        "director",
+        "vp,",
+        "vp ",
+        "chief",
+        "lead ",
+        " lead",
+        "experienced",
+        "expert",
+        "nurse",
+        "nursing",
+        "clinical",
+        "phlebotom",
+        "caregiver",
+        "care assistant",
+        "driver",
+        "warehouse operative",
+        "cleaner",
+        "barista",
+        "chef",
+        "security guard"
+      ]
+    }
+  },
   "location_filter": {
     "countries": [
-      "US"
+      "US",
+      "GB"
     ]
   },
   "sources": [
@@ -33,13 +209,21 @@
       "type": "pcsx",
       "list_url": "https://apply.careers.microsoft.com/api/pcsx/search",
       "domain": "microsoft.com",
-      "query": "intern"
+      "query": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Google",
       "type": "google_careers",
       "search_url": "https://www.google.com/about/careers/applications/jobs/results/?q=intern",
-      "data_key": "ds:1"
+      "data_key": "ds:1",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Netflix",
@@ -53,14 +237,22 @@
     {
       "name": "Amazon",
       "type": "amazon",
-      "query": "intern"
+      "query": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Oracle",
       "type": "oracle_careers",
       "host": "eeho.fa.us2.oraclecloud.com",
       "site_number": "CX_45001",
-      "search_keyword": "intern"
+      "search_keyword": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "NVIDIA",
@@ -100,7 +292,11 @@
       "host": "https://blackrock.wd1.myworkdayjobs.com",
       "tenant": "blackrock",
       "site": "BlackRock_Professional",
-      "search_text": "intern"
+      "search_text": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Leidos",
@@ -131,7 +327,11 @@
       "type": "pcsx",
       "list_url": "https://morganstanley.eightfold.ai/api/pcsx/search",
       "domain": "morganstanley.com",
-      "query": "intern"
+      "query": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Capital One",
@@ -199,7 +399,11 @@
     {
       "name": "Stripe",
       "type": "greenhouse",
-      "board_token": "stripe"
+      "board_token": "stripe",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Robinhood",
@@ -234,12 +438,20 @@
     {
       "name": "Jane Street",
       "type": "greenhouse",
-      "board_token": "janestreet"
+      "board_token": "janestreet",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Optiver",
       "type": "greenhouse",
-      "board_token": "optiverus"
+      "board_token": "optiverus",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Virtu Financial",
@@ -249,22 +461,38 @@
     {
       "name": "Anthropic",
       "type": "greenhouse",
-      "board_token": "anthropic"
+      "board_token": "anthropic",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "OpenAI",
       "type": "ashby",
-      "board_slug": "openai"
+      "board_slug": "openai",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Scale AI",
       "type": "greenhouse",
-      "board_token": "scaleai"
+      "board_token": "scaleai",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Cohere",
       "type": "ashby",
-      "board_slug": "cohere"
+      "board_slug": "cohere",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Mistral AI",
@@ -294,7 +522,11 @@
     {
       "name": "Palantir",
       "type": "lever",
-      "company_slug": "palantir"
+      "company_slug": "palantir",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Notion",
@@ -319,7 +551,11 @@
     {
       "name": "Figma",
       "type": "greenhouse",
-      "board_token": "figma"
+      "board_token": "figma",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Amplitude",
@@ -329,22 +565,38 @@
     {
       "name": "Datadog",
       "type": "greenhouse",
-      "board_token": "datadog"
+      "board_token": "datadog",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Snowflake",
       "type": "ashby",
-      "board_slug": "snowflake"
+      "board_slug": "snowflake",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Databricks",
       "type": "greenhouse",
-      "board_token": "databricks"
+      "board_token": "databricks",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Hugging Face",
       "type": "workable",
-      "shortcode": "huggingface"
+      "shortcode": "huggingface",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Wing",
@@ -359,7 +611,11 @@
     {
       "name": "Isomorphic Labs",
       "type": "greenhouse",
-      "board_token": "isomorphiclabs"
+      "board_token": "isomorphiclabs",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Neuralink",
@@ -397,12 +653,20 @@
     {
       "name": "Spotify",
       "type": "lever",
-      "company_slug": "spotify"
+      "company_slug": "spotify",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "ByteDance / TikTok",
       "type": "smartrecruiters",
-      "company_id": "bytedance"
+      "company_id": "bytedance",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Roku",
@@ -472,7 +736,11 @@
     {
       "name": "Cloudflare",
       "type": "greenhouse",
-      "board_token": "cloudflare"
+      "board_token": "cloudflare",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Gusto",
@@ -562,7 +830,11 @@
     {
       "name": "Jump Trading",
       "type": "greenhouse",
-      "board_token": "jumptrading"
+      "board_token": "jumptrading",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Akuna Capital",
@@ -572,7 +844,11 @@
     {
       "name": "Point72",
       "type": "greenhouse",
-      "board_token": "point72"
+      "board_token": "point72",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Barclays",
@@ -580,7 +856,11 @@
       "host": "https://barclays.wd3.myworkdayjobs.com",
       "tenant": "barclays",
       "site": "External_Career_Site_Barclays",
-      "search_text": "intern"
+      "search_text": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Visa",
@@ -624,7 +904,11 @@
     {
       "name": "Epic Games",
       "type": "greenhouse",
-      "board_token": "epicgames"
+      "board_token": "epicgames",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Roblox",
@@ -667,7 +951,11 @@
     {
       "name": "MongoDB",
       "type": "greenhouse",
-      "board_token": "mongodb"
+      "board_token": "mongodb",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Confluent",
@@ -714,7 +1002,11 @@
       "host": "https://accenture.wd103.myworkdayjobs.com",
       "tenant": "accenture",
       "site": "AccentureCareers",
-      "search_text": "intern"
+      "search_text": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Nike (Tech)",
@@ -815,7 +1107,11 @@
     {
       "name": "HRT",
       "type": "greenhouse",
-      "board_token": "hrttalentcommunity"
+      "board_token": "hrttalentcommunity",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Qualcomm",
@@ -829,7 +1125,11 @@
       "type": "pcsx",
       "list_url": "https://citi.eightfold.ai/api/pcsx/search",
       "domain": "citi.com",
-      "query": "intern"
+      "query": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Valve",
@@ -847,7 +1147,11 @@
       "base_url": "https://careers.bcg.com",
       "ref_num": "BCG1US",
       "search_url": "https://careers.bcg.com/global/en/search-results",
-      "keywords": "intern"
+      "keywords": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Yelp",
@@ -863,7 +1167,11 @@
       "base_url": "https://careers.cisco.com",
       "ref_num": "CISCISGLOBAL",
       "search_url": "https://careers.cisco.com/global/en/search-results",
-      "keywords": "intern"
+      "keywords": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Splunk",
@@ -879,7 +1187,11 @@
       "base_url": "https://jobs.baesystems.com",
       "ref_num": "BAE1US",
       "search_url": "https://jobs.baesystems.com/global/en/search-results",
-      "keywords": "intern"
+      "keywords": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Warner Bros. Discovery",
@@ -909,7 +1221,11 @@
       "name": "Deloitte",
       "type": "avature",
       "feed_url": "https://apply.deloitte.com/en_US/careers/SearchJobs/feed/",
-      "page_size": 100
+      "page_size": 100,
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Electronic Arts (EA)",
@@ -926,13 +1242,21 @@
       "name": "Apple",
       "type": "playwright",
       "profile": "apple",
-      "page_url": "https://jobs.apple.com/en-us/search?search=intern"
+      "page_url": "https://jobs.apple.com/en-us/search?search=intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Meta",
       "type": "playwright",
       "profile": "meta",
-      "page_url": "https://www.metacareers.com/jobs?q=intern"
+      "page_url": "https://www.metacareers.com/jobs?q=intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Tesla",
@@ -943,12 +1267,20 @@
     {
       "name": "EY",
       "type": "successfactors",
-      "feed_url": "https://careers.ey.com/services/rss/job/?locale=en_US&keywords=(intern)"
+      "feed_url": "https://careers.ey.com/services/rss/job/?locale=en_US&keywords=(intern)",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "SAP",
       "type": "successfactors",
-      "feed_url": "https://jobs.sap.com/services/rss/job/?locale=en_US&keywords=(intern)"
+      "feed_url": "https://jobs.sap.com/services/rss/job/?locale=en_US&keywords=(intern)",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Activision Blizzard",
@@ -982,7 +1314,11 @@
       "host": "https://pwc.wd3.myworkdayjobs.com",
       "tenant": "pwc",
       "site": "Global_Experienced_Careers",
-      "search_text": "intern"
+      "search_text": "intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Equifax",
@@ -1011,7 +1347,11 @@
       "host": "hdpc.fa.us2.oraclecloud.com",
       "site_number": "CX_2001",
       "search_keyword": "intern",
-      "job_url": "https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/{id}"
+      "job_url": "https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/{id}",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "JPMorgan Chase",
@@ -1019,7 +1359,11 @@
       "host": "jpmc.fa.oraclecloud.com",
       "site_number": "CX_1001",
       "search_keyword": "intern",
-      "job_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/{id}"
+      "job_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/{id}",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Wells Fargo",
@@ -1043,13 +1387,21 @@
       "name": "Bain & Company",
       "type": "playwright",
       "profile": "bain",
-      "page_url": "https://www.bain.com/careers/find-a-role/?q=intern"
+      "page_url": "https://www.bain.com/careers/find-a-role/?q=intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "McKinsey & Company",
       "type": "playwright",
       "profile": "mckinsey",
-      "page_url": "https://www.mckinsey.com/careers/search-jobs?q=intern"
+      "page_url": "https://www.mckinsey.com/careers/search-jobs?q=intern",
+      "countries": [
+        "US",
+        "GB"
+      ]
     },
     {
       "name": "Shopify",
@@ -1062,6 +1414,673 @@
       "type": "playwright",
       "profile": "rippling",
       "page_url": "https://www.rippling.com/careers/open-roles"
+    },
+    {
+      "name": "Monzo",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "monzo"
+    },
+    {
+      "name": "Deliveroo",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "deliveroo"
+    },
+    {
+      "name": "GoCardless",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "gocardless"
+    },
+    {
+      "name": "Tide",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "tide"
+    },
+    {
+      "name": "SumUp",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "sumup"
+    },
+    {
+      "name": "Ebury",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "ebury"
+    },
+    {
+      "name": "TrueLayer",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "truelayer"
+    },
+    {
+      "name": "Form3",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "form3"
+    },
+    {
+      "name": "ComplyAdvantage",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "complyadvantage"
+    },
+    {
+      "name": "Global Relay",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "globalrelay"
+    },
+    {
+      "name": "Wayve",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "wayve"
+    },
+    {
+      "name": "Graphcore",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "graphcore"
+    },
+    {
+      "name": "Riverlane",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "riverlane"
+    },
+    {
+      "name": "Dexory",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "dexory"
+    },
+    {
+      "name": "CarbonChain",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "carbonchain"
+    },
+    {
+      "name": "Nothing",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "nothing"
+    },
+    {
+      "name": "Canonical",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "canonical"
+    },
+    {
+      "name": "Auto Trader",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "autotrader"
+    },
+    {
+      "name": "Ocado Group",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "ocadogroup"
+    },
+    {
+      "name": "OVO Energy",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "greenhouse",
+      "board_token": "ovoenergy"
+    },
+    {
+      "name": "ElevenLabs",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "elevenlabs"
+    },
+    {
+      "name": "Synthesia",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "synthesia"
+    },
+    {
+      "name": "Tilt",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "tilthq"
+    },
+    {
+      "name": "Legora",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "legora"
+    },
+    {
+      "name": "Lovable",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "lovable"
+    },
+    {
+      "name": "Granola",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "granola"
+    },
+    {
+      "name": "Multiverse",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "multiverse"
+    },
+    {
+      "name": "Quantexa",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "quantexa"
+    },
+    {
+      "name": "Zego",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "zego"
+    },
+    {
+      "name": "Marshmallow",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "marshmallow"
+    },
+    {
+      "name": "Ravio",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "ravio"
+    },
+    {
+      "name": "OakNorth",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "oaknorth"
+    },
+    {
+      "name": "hyperexponential",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "hyperexponential"
+    },
+    {
+      "name": "Sylvera",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "sylvera"
+    },
+    {
+      "name": "Wonderful",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "wonderful"
+    },
+    {
+      "name": "Tractable",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "tractable"
+    },
+    {
+      "name": "Unlikely AI",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "unlikelyai"
+    },
+    {
+      "name": "n8n",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "n8n"
+    },
+    {
+      "name": "Sierra",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "ashby",
+      "board_slug": "sierra"
+    },
+    {
+      "name": "Goodlord",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "pinpoint",
+      "tenant": "goodlord"
+    },
+    {
+      "name": "Frontier Developments",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "pinpoint",
+      "tenant": "frontierdevelopments"
+    },
+    {
+      "name": "Tails.com",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "pinpoint",
+      "tenant": "tails"
+    },
+    {
+      "name": "On the Beach",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "teamtailor",
+      "tenant": "onthebeach"
+    },
+    {
+      "name": "Paysend",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "type": "teamtailor",
+      "tenant": "paysend"
+    },
+    {
+      "name": "Man Group",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "mangroup"
+    },
+    {
+      "name": "Qube Research & Technologies",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "quberesearchandtechnologies"
+    },
+    {
+      "name": "Squarepoint Capital",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "squarepointcapital"
+    },
+    {
+      "name": "IMC Trading",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "imc"
+    },
+    {
+      "name": "GSA Capital",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "gsacapital"
+    },
+    {
+      "name": "Winton",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "winton"
+    },
+    {
+      "name": "Engineers Gate",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "engineersgate"
+    },
+    {
+      "name": "WPP",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "greenhouse",
+      "board_token": "wpp"
+    },
+    {
+      "name": "LSEG",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "workday",
+      "host": "https://lseg.wd3.myworkdayjobs.com",
+      "tenant": "lseg",
+      "site": "Careers",
+      "search_text": "intern"
+    },
+    {
+      "name": "Lloyds Banking Group",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "workday",
+      "host": "https://lbg.wd3.myworkdayjobs.com",
+      "tenant": "lbg",
+      "site": "lbg_Careers",
+      "search_text": "intern"
+    },
+    {
+      "name": "Airbus",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "workday",
+      "host": "https://ag.wd3.myworkdayjobs.com",
+      "tenant": "ag",
+      "site": "Airbus",
+      "search_text": "placement",
+      "max_results": 400
+    },
+    {
+      "name": "Darktrace",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "workday",
+      "host": "https://darktrace.wd3.myworkdayjobs.com",
+      "tenant": "darktrace",
+      "site": "DarktaceExternal",
+      "search_text": "intern"
+    },
+    {
+      "name": "GSK",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "phenom",
+      "base_url": "https://jobs.gsk.com",
+      "ref_num": "GHVGPAGB",
+      "search_url": "https://jobs.gsk.com/en-gb/search-results",
+      "keywords": "placement"
+    },
+    {
+      "name": "AstraZeneca",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "pcsx",
+      "list_url": "https://astrazeneca.eightfold.ai/api/pcsx/search",
+      "domain": "astrazeneca.com",
+      "query": "placement"
+    },
+    {
+      "name": "QinetiQ",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "successfactors",
+      "feed_url": "https://careers.qinetiq.com/services/rss/job/?locale=en_GB&keywords=(intern)",
+      "skip_location_filter": true
+    },
+    {
+      "name": "Adzuna \u2014 London internships",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "adzuna",
+      "what": "internship",
+      "where": "london",
+      "max_days_old": 30
+    },
+    {
+      "name": "Adzuna \u2014 UK industrial placements",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "adzuna",
+      "what": "industrial placement",
+      "where": "",
+      "max_days_old": 30
+    },
+    {
+      "name": "Adzuna \u2014 London graduate software",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "adzuna",
+      "what": "graduate software engineer",
+      "where": "london",
+      "max_days_old": 30
+    },
+    {
+      "name": "Reed \u2014 London internships",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "reed",
+      "keywords": "internship",
+      "location": "London"
+    },
+    {
+      "name": "Reed \u2014 UK industrial placements",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "uk_technical",
+      "keyword_profile": "uk_early_career",
+      "type": "reed",
+      "keywords": "industrial placement",
+      "location": ""
     }
   ]
 }

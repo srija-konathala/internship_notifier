@@ -4,10 +4,19 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config.json"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from uk_sources import (  # noqa: E402
+    DUAL_REGION_SOURCE_NAMES,
+    KEYWORD_PROFILES,
+    ROLE_PROFILES,
+    UK_SOURCES,
+)
 
 SOURCES: list[dict] = [
     {
@@ -514,8 +523,23 @@ SOURCES: list[dict] = [
     },
 ]
 
+def widen_us_sources(sources: list[dict]) -> list[dict]:
+    """US-based employers with UK offices should match in both countries."""
+    for src in sources:
+        if src.get("name") in DUAL_REGION_SOURCE_NAMES:
+            src["countries"] = ["US", "GB"]
+    return sources
+
+
+ALL_SOURCES = widen_us_sources(SOURCES) + UK_SOURCES
+
 CONFIG = {
     "poll_interval_seconds": 180,
+    # Sources are fetched concurrently; playwright ones stay serial.
+    "fetch_workers": 10,
+    # A newly added source records its existing postings silently instead of
+    # alerting on its whole backlog.
+    "prime_new_sources": True,
     "title_keywords": ["intern", "internship", "student"],
     # Optional AND-filter: if non-empty, a posting must ALSO match one of
     # these (on top of title_keywords) to be notified. Leave empty to keep
@@ -539,14 +563,21 @@ CONFIG = {
         "ios developer",
         "android developer",
     ],
-    "location_filter": {"countries": ["US"]},
-    "sources": SOURCES,
+    # Per-source "keyword_profile" / "role_profile" select these; sources
+    # without one fall back to title_keywords + title_require_any above.
+    "keyword_profiles": KEYWORD_PROFILES,
+    "role_profiles": ROLE_PROFILES,
+    "location_filter": {"countries": ["US", "GB"]},
+    "sources": ALL_SOURCES,
 }
 
 
 def main() -> None:
     CONFIG_PATH.write_text(json.dumps(CONFIG, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(SOURCES)} sources to {CONFIG_PATH}")
+    print(
+        f"Wrote {len(ALL_SOURCES)} sources to {CONFIG_PATH} "
+        f"({len(SOURCES)} existing + {len(UK_SOURCES)} UK)"
+    )
 
 
 if __name__ == "__main__":

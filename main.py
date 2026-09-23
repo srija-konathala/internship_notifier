@@ -1065,6 +1065,9 @@ def fetch_workday(src: dict[str, Any]) -> list[dict[str, Any]]:
     site = (src.get("site") or "").strip()
     locale = (src.get("locale") or "en-US").strip()
     search_text = (src.get("search_text") or "intern").strip()
+    # Workday pages 20 at a time, so broad queries (e.g. Airbus "placement")
+    # cost dozens of round trips; cap them to keep one source from dominating.
+    max_results = int(src.get("max_results") or 600)
     out: list[dict[str, Any]] = []
     offset = 0
     page_size = 20
@@ -1108,6 +1111,8 @@ def fetch_workday(src: dict[str, Any]) -> list[dict[str, Any]]:
         if total and offset >= total:
             break
         if len(postings) < page_size:
+            break
+        if len(out) >= max_results:
             break
 
     return out
