@@ -1,0 +1,63 @@
+name: Discover UK startups
+
+on:
+  schedule:
+    # Once a day, offset from the polling job.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Candidates to resolve this run"
+        default: "200"
+      max_add:
+        description: "Max boards to add to config.uk.auto.json"
+        default: "25"
+      min_score:
+        description: "Score threshold for auto-adding a board"
+        default: "45"
+
+concurrency:
+  group: uk-startup-discovery
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: playwright install --with-deps chromium
+
+      - name: Discover London startups
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/discover_uk_startups.py \
+            --limit "${{ inputs.limit || '200' }}" \
+            --max-add "${{ inputs.max_add || '25' }}" \
+            --min-score "${{ inputs.min_score || '45' }}" \
+            --render \
+            --digest
+
+      # Newly added boards are primed on their first poll, so committing them
+      # here never floods the chat with a backlog of existing postings.
+      - name: Persist discovered startups
+        run: |
+          git config user.name "internship-watcher-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add config.uk.auto.json data/uk_startups.json
+          git diff --cached --quiet || git commit -m "chore: update discovered UK startups [skip ci]"
+          git push
