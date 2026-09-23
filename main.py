@@ -15,6 +15,7 @@ import sys
 import time
 import uuid
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from html import escape as html_escape
 from typing import Any
@@ -28,11 +29,49 @@ load_dotenv(Path(__file__).resolve().parent / ".env")
 
 STATE_DB = os.environ.get("STATE_DB_PATH", "./state.db")
 CONFIG_PATH = os.environ.get("CONFIG_PATH", "./config.json")
+# Sources discovered by scripts/discover_uk_startups.py live in their own file so
+# that regenerating config.json from scripts/build_config.py never drops them.
+AUTO_CONFIG_PATH = os.environ.get("AUTO_CONFIG_PATH", "./config.uk.auto.json")
+
+
+UA_BROWSER = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+)
+
+
+class SourceSkipped(Exception):
+    """Source cannot run right now (e.g. missing optional API key) — not an error."""
+
+
+def merge_auto_sources(config: dict[str, Any], auto_path: str) -> dict[str, Any]:
+    if not Path(auto_path).is_file():
+        return config
+    try:
+        with open(auto_path, encoding="utf-8") as f:
+            auto = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"[warn] {auto_path} is not valid JSON ({e}); ignoring it.")
+        return config
+
+    sources = config.setdefault("sources", [])
+    existing = {source_key(s) for s in sources}
+    added = 0
+    for src in auto.get("sources") or []:
+        if source_key(src) in existing:
+            continue
+        existing.add(source_key(src))
+        sources.append(src)
+        added += 1
+    if added:
+        print(f"Merged {added} auto-discovered source(s) from {auto_path}")
+    return config
 
 
 def load_config(path: str) -> dict[str, Any]:
     with open(path, encoding="utf-8") as f:
-        return json.load(f)
+        config = json.load(f)
+    return merge_auto_sources(config, AUTO_CONFIG_PATH)
 
 
 def get_env(name: str) -> str:
@@ -55,6 +94,40 @@ def init_db(conn: sqlite3.Connection) -> None:
             PRIMARY KEY (source_key, job_id)
         )
         """
+    )
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS source_state (
+            source_key TEXT PRIMARY KEY,
+            primed_at REAL NOT NULL
+        )
+        """
+    )
+    conn.commit()
+
+
+def source_is_new(conn: sqlite3.Connection, source_key: str) -> bool:
+    """
+    True when a source has never been polled. Sources added before source_state
+    existed are recognised by their recorded postings, so they are not re-primed.
+    """
+    row = conn.execute(
+        "SELECT 1 FROM source_state WHERE source_key = ? LIMIT 1",
+        (source_key,),
+    ).fetchone()
+    if row is not None:
+        return False
+    row = conn.execute(
+        "SELECT 1 FROM seen_jobs WHERE source_key = ? LIMIT 1",
+        (source_key,),
+    ).fetchone()
+    return row is None
+
+
+def mark_source_primed(conn: sqlite3.Connection, source_key: str) -> None:
+    conn.execute(
+        "INSERT OR IGNORE INTO source_state (source_key, primed_at) VALUES (?, ?)",
+        (source_key, time.time()),
     )
     conn.commit()
 
@@ -94,6 +167,58 @@ def title_matches(title: str, keywords: list[str]) -> bool:
         elif kl in t:
             return True
     return False
+
+
+def source_keywords(config: dict[str, Any], src: dict[str, Any]) -> list[str]:
+    """Stage keywords for a source: per-source list, named profile, or global."""
+    if src.get("title_keywords"):
+        return list(src["title_keywords"])
+    profile = src.get("keyword_profile")
+    if profile:
+        profiles = config.get("keyword_profiles") or {}
+        if profile in profiles:
+            return list(profiles[profile])
+        print(f"[warn] unknown keyword_profile {profile!r}; using global keywords")
+    return list(config.get("title_keywords") or ["intern", "internship"])
+
+
+def source_role_filter(
+    config: dict[str, Any], src: dict[str, Any]
+) -> tuple[list[str], bool, list[str]]:
+    """Return (require_any, allow_vague, exclude_any) for a source."""
+    profiles = config.get("role_profiles") or {}
+    name = src.get("role_profile") or "default"
+    profile = profiles.get(name)
+    if profile is None:
+        if name != "default":
+            print(f"[warn] unknown role_profile {name!r}; using default")
+        profile = profiles.get("default") or {}
+    require_any = list(
+        src.get("title_require_any")
+        or profile.get("require_any")
+        or config.get("title_require_any")
+        or []
+    )
+    allow_vague = bool(profile.get("allow_vague"))
+    exclude_any = list(profile.get("exclude_any") or config.get("title_exclude_any") or [])
+    return require_any, allow_vague, exclude_any
+
+
+def title_passes(
+    title: str,
+    keywords: list[str],
+    require_any: list[str],
+    allow_vague: bool,
+    exclude_any: list[str],
+) -> bool:
+    """Early-career keyword gate, then the function gate unless vague titles are allowed."""
+    if not title_matches(title, keywords):
+        return False
+    if exclude_any and title_matches(title, exclude_any):
+        return False
+    if require_any and not allow_vague and not title_matches(title, require_any):
+        return False
+    return True
 
 
 # US state / DC codes for "City, ST" style locations (Greenhouse, Lever, etc.).
@@ -138,6 +263,42 @@ _US_STATE_INLINE_RE = re.compile(
     re.I,
 )
 
+# Unambiguous UK markers: a hint containing one of these is UK regardless of
+# whatever else it mentions.
+_UK_STRONG_RE = re.compile(
+    r"united\s+kingdom|great\s+britain|\bengland\b|\bscotland\b|\bwales\b|"
+    r"northern\s+ireland|greater\s+london|(^|[,;|(\s])u\.?k\.?($|[,;|)\s])|"
+    r"\bgbr?\b|\bu\.k\.|\buk\s+remote\b|\bremote[^\n,]{0,24}\buk\b",
+    re.I,
+)
+
+# UK cities that also exist elsewhere (Cambridge MA, London ON, Birmingham AL),
+# so they only count when the same hint has no competing country signal.
+_UK_CITY_RE = re.compile(
+    r"\b(?:london|cambridge|oxford|manchester|edinburgh|glasgow|bristol|leeds|"
+    r"birmingham|belfast|cardiff|liverpool|sheffield|newcastle|nottingham|"
+    r"brighton|reading|southampton|portsmouth|coventry|leicester|york|bath|"
+    r"milton\s+keynes|cheltenham|swindon|aberdeen|dundee|exeter|norwich|"
+    r"canary\s+wharf|shoreditch|farringdon|chippenham|basingstoke|guildford|"
+    r"slough|watford|hounslow|croydon|warrington|harwell|didcot)\b",
+    re.I,
+)
+
+_NON_UK_REGION_RE = re.compile(
+    r"\b(?:united\s+states|usa|u\.s\.a\.?|canada|ontario|india|china|ireland|"
+    r"israel|australia|germany|france|japan|singapore|mexico|brazil|spain|italy|"
+    r"netherlands|switzerland|sweden|poland|belgium|hungary|romania|serbia|"
+    r"ukraine|russia|philippines|indonesia|malaysia|thailand|vietnam|portugal|"
+    r"austria|finland|norway|denmark|greece|taiwan|colombia|chile|argentina|"
+    r"peru|south\s+africa|new\s+zealand|hong\s+kong|south\s+korea|korea|uae|"
+    r"new\s+hampshire|massachusetts|alabama|new\s+jersey|"
+    r"new\s+york|san\s+francisco|seattle|austin|chicago|boston|denver|atlanta|"
+    r"toronto|montreal|vancouver|bengaluru|bangalore|hyderabad|mumbai|dublin|"
+    r"paris|berlin|munich|amsterdam|zurich|stockholm|madrid|barcelona|milan|"
+    r"tokyo|sydney|melbourne|singapore|tel\s+aviv|dubai|warsaw|lisbon)\b",
+    re.I,
+)
+
 US_MAJOR_METROS: tuple[str, ...] = (
     "san francisco",
     "new york city",
@@ -173,12 +334,77 @@ US_MAJOR_METROS: tuple[str, ...] = (
 )
 
 
-def location_filter_wants_us_only(config: dict[str, Any]) -> bool:
-    lf = config.get("location_filter")
-    if not lf or not lf.get("countries"):
+_COUNTRY_ALIASES = {
+    "US": "US", "USA": "US", "U.S.": "US", "UNITED STATES": "US",
+    "UK": "GB", "GB": "GB", "GBR": "GB", "UNITED KINGDOM": "GB", "BRITAIN": "GB",
+}
+
+
+def normalize_countries(values: Any) -> set[str]:
+    """Map assorted country spellings onto the codes the matchers understand."""
+    out: set[str] = set()
+    for v in values or []:
+        code = _COUNTRY_ALIASES.get(str(v).strip().upper())
+        if code:
+            out.add(code)
+    return out
+
+
+def configured_countries(config: dict[str, Any]) -> set[str]:
+    lf = config.get("location_filter") or {}
+    return normalize_countries(lf.get("countries"))
+
+
+def source_countries(src: dict[str, Any], default: set[str]) -> set[str]:
+    """Per-source override, e.g. a London-only board tagged {"countries": ["GB"]}."""
+    if src.get("skip_location_filter"):
+        return set()
+    if src.get("countries"):
+        return normalize_countries(src["countries"])
+    return default
+
+
+def job_matches_countries(
+    job: dict[str, Any], title: str, countries: set[str]
+) -> bool:
+    if not countries:
+        return True
+    if "US" in countries and job_matches_us_location(job, title):
+        return True
+    if "GB" in countries and job_matches_uk_location(job, title):
+        return True
+    return False
+
+
+def _hint_is_uk(text: str) -> bool:
+    t = (text or "").strip()
+    if not t:
         return False
-    codes = {str(c).strip().upper() for c in lf["countries"] if str(c).strip()}
-    return "US" in codes or "USA" in codes
+    if _UK_STRONG_RE.search(t):
+        return True
+    if _NON_UK_REGION_RE.search(t):
+        return False
+    m = re.search(r",\s*([A-Za-z]{2})\s*$", t)
+    if m and m.group(1).upper() in (US_STATE_CODES | CA_PROVINCE_CODES):
+        return False
+    return bool(_UK_CITY_RE.search(t))
+
+
+def job_matches_uk_location(job: dict[str, Any], title: str) -> bool:
+    """Heuristic: job has a UK location signal. False positives are possible."""
+    cc = (job.get("country_code") or "").strip().lower()
+    if cc:
+        return cc in ("gb", "uk", "gbr", "united kingdom")
+
+    gloc = (job.get("google_country") or "").strip().upper()
+    if gloc:
+        return gloc in ("GB", "UK", "UNITED KINGDOM")
+
+    hints = [str(h).strip() for h in (job.get("location_hints") or []) if str(h).strip()]
+    for h in hints:
+        if _hint_is_uk(h):
+            return True
+    return _hint_is_uk(title)
 
 
 def job_matches_us_location(job: dict[str, Any], title: str) -> bool:
@@ -1086,6 +1312,218 @@ def fetch_oracle_careers(src: dict[str, Any]) -> list[dict[str, Any]]:
     return out
 
 
+def fetch_pinpoint(src: dict[str, Any]) -> list[dict[str, Any]]:
+    """
+    Pinpoint ATS (popular with UK employers): public postings feed per tenant.
+    See https://{tenant}.pinpointhq.com/postings.json
+    """
+    tenant = (src.get("tenant") or src.get("company_slug") or "").strip()
+    feed_url = (src.get("feed_url") or "").strip()
+    if not feed_url:
+        if not tenant:
+            raise ValueError("pinpoint source requires tenant or feed_url")
+        feed_url = f"https://{tenant}.pinpointhq.com/postings.json"
+    r = requests.get(feed_url, timeout=45, headers={"User-Agent": UA_BROWSER})
+    r.raise_for_status()
+    out: list[dict[str, Any]] = []
+    for p in (r.json() or {}).get("data") or []:
+        jid = str(p.get("id") or "")
+        title = (p.get("title") or "").strip()
+        link = (p.get("url") or "").strip()
+        if not jid or not title:
+            continue
+        hints: list[str] = []
+        loc = p.get("location")
+        if isinstance(loc, dict):
+            for key in ("name", "city", "province", "country"):
+                v = loc.get(key)
+                if isinstance(v, str) and v.strip():
+                    hints.append(v.strip())
+        wt = (p.get("workplace_type_text") or "").strip()
+        if wt:
+            hints.append(wt)
+        out.append({"id": jid, "title": title, "url": link, "location_hints": hints})
+    return out
+
+
+_TT_NS = "{https://teamtailor.com/locations}"
+
+
+def fetch_teamtailor(src: dict[str, Any]) -> list[dict[str, Any]]:
+    """
+    Teamtailor careers sites expose a public RSS feed per tenant.
+    See https://{tenant}.teamtailor.com/jobs.rss
+    """
+    tenant = (src.get("tenant") or src.get("company_slug") or "").strip()
+    feed_url = (src.get("feed_url") or "").strip()
+    if not feed_url:
+        if not tenant:
+            raise ValueError("teamtailor source requires tenant or feed_url")
+        feed_url = f"https://{tenant}.teamtailor.com/jobs.rss"
+    r = requests.get(feed_url, timeout=45, headers={"User-Agent": UA_BROWSER})
+    r.raise_for_status()
+    out: list[dict[str, Any]] = []
+    for item in ET.fromstring(r.text).findall("./channel/item"):
+        title = (item.findtext("title") or "").strip()
+        link = (item.findtext("link") or "").strip()
+        jid = (item.findtext("guid") or link or "").strip()
+        if not title or not jid:
+            continue
+        hints: list[str] = []
+        locations = item.find(f"{_TT_NS}locations")
+        if locations is not None:
+            # <tt:locations><tt:location><tt:city>/<tt:country>...</></>
+            for node in locations.iter():
+                if node.tag in (f"{_TT_NS}locations", f"{_TT_NS}location"):
+                    continue
+                if node.tag in (f"{_TT_NS}name", f"{_TT_NS}city", f"{_TT_NS}country"):
+                    text = (node.text or "").strip()
+                    if text and text not in hints:
+                        hints.append(text)
+        remote = (item.findtext("remoteStatus") or "").strip()
+        if remote:
+            hints.append(remote)
+        out.append({"id": jid, "title": title, "url": link, "location_hints": hints})
+    return out
+
+
+def fetch_adzuna(src: dict[str, Any]) -> list[dict[str, Any]]:
+    """
+    Adzuna aggregator — the widest UK net we have. Free credentials from
+    https://developer.adzuna.com/ ; the source skips itself when unset.
+    """
+    app_id = os.environ.get("ADZUNA_APP_ID", "").strip()
+    app_key = os.environ.get("ADZUNA_APP_KEY", "").strip()
+    if not app_id or not app_key:
+        raise SourceSkipped(
+            "ADZUNA_APP_ID / ADZUNA_APP_KEY not set — see https://developer.adzuna.com/"
+        )
+    country = (src.get("country") or "gb").strip().lower()
+    what = (src.get("what") or "internship").strip()
+    where = (src.get("where") or "london").strip()
+    distance = int(src.get("distance") or 20)
+    page_size = min(int(src.get("page_size") or 50), 50)
+    max_pages = int(src.get("max_pages") or 3)
+    category = (src.get("category") or "").strip()
+
+    out: list[dict[str, Any]] = []
+    for page in range(1, max_pages + 1):
+        params: dict[str, Any] = {
+            "app_id": app_id,
+            "app_key": app_key,
+            "what": what,
+            "results_per_page": page_size,
+            "content-type": "application/json",
+        }
+        if where:
+            params["where"] = where
+            params["distance"] = distance
+        if category:
+            params["category"] = category
+        if src.get("max_days_old"):
+            params["max_days_old"] = int(src["max_days_old"])
+        r = requests.get(
+            f"https://api.adzuna.com/v1/api/jobs/{country}/search/{page}",
+            params=params,
+            timeout=45,
+            headers={"User-Agent": UA_BROWSER, "Accept": "application/json"},
+        )
+        r.raise_for_status()
+        results = (r.json() or {}).get("results") or []
+        if not results:
+            break
+        for j in results:
+            jid = str(j.get("id") or "")
+            title = re.sub(r"<[^>]+>", "", j.get("title") or "").strip()
+            link = (j.get("redirect_url") or "").strip()
+            if not jid or not title:
+                continue
+            hints: list[str] = []
+            loc = j.get("location")
+            if isinstance(loc, dict):
+                display = (loc.get("display_name") or "").strip()
+                if display:
+                    hints.append(display)
+                hints.extend(str(a).strip() for a in loc.get("area") or [] if str(a).strip())
+            company = ((j.get("company") or {}).get("display_name") or "").strip()
+            row: dict[str, Any] = {
+                "id": jid,
+                "title": f"{title} — {company}" if company else title,
+                "url": link,
+                "location_hints": hints,
+            }
+            if country == "gb":
+                row["country_code"] = "gb"
+            elif country == "us":
+                row["country_code"] = "us"
+            out.append(row)
+        if len(results) < page_size:
+            break
+    return out
+
+
+def fetch_reed(src: dict[str, Any]) -> list[dict[str, Any]]:
+    """
+    Reed.co.uk API — UK-only board. Free key from
+    https://www.reed.co.uk/developers ; the source skips itself when unset.
+    """
+    api_key = os.environ.get("REED_API_KEY", "").strip()
+    if not api_key:
+        raise SourceSkipped(
+            "REED_API_KEY not set — see https://www.reed.co.uk/developers"
+        )
+    keywords = (src.get("keywords") or "internship").strip()
+    location = (src.get("location") or "London").strip()
+    distance = int(src.get("distance") or 15)
+    page_size = min(int(src.get("page_size") or 100), 100)
+    max_pages = int(src.get("max_pages") or 3)
+
+    out: list[dict[str, Any]] = []
+    skip = 0
+    for _ in range(max_pages):
+        params: dict[str, Any] = {
+            "keywords": keywords,
+            "resultsToTake": page_size,
+            "resultsToSkip": skip,
+        }
+        if location:
+            params["locationName"] = location
+            params["distanceFromLocation"] = distance
+        r = requests.get(
+            "https://www.reed.co.uk/api/1.0/search",
+            params=params,
+            auth=(api_key, ""),
+            timeout=45,
+            headers={"User-Agent": UA_BROWSER, "Accept": "application/json"},
+        )
+        r.raise_for_status()
+        data = r.json() or {}
+        results = data.get("results") or []
+        if not results:
+            break
+        for j in results:
+            jid = str(j.get("jobId") or "")
+            title = (j.get("jobTitle") or "").strip()
+            link = (j.get("jobUrl") or "").strip()
+            if not jid or not title:
+                continue
+            employer = (j.get("employerName") or "").strip()
+            hints = [x for x in [(j.get("locationName") or "").strip()] if x]
+            out.append(
+                {
+                    "id": jid,
+                    "title": f"{title} — {employer}" if employer else title,
+                    "url": link,
+                    "location_hints": hints,
+                    "country_code": "gb",
+                }
+            )
+        skip += len(results)
+        if skip >= int(data.get("totalResults") or 0) or len(results) < page_size:
+            break
+    return out
+
+
 def fetch_microsoft(src: dict[str, Any]) -> list[dict[str, Any]]:
     merged = {
         "list_url": "https://apply.careers.microsoft.com/api/pcsx/search",
@@ -1155,6 +1593,20 @@ def source_key(src: dict[str, Any]) -> str:
         return f"bofa:{src.get('search') or 'getAllJobs'}"
     if stype == "playwright":
         return f"playwright:{src.get('profile') or 'unknown'}:{src.get('page_url') or 'unknown'}"
+    if stype == "pinpoint":
+        return f"pinpoint:{src.get('tenant') or src.get('feed_url') or src.get('name') or 'unknown'}"
+    if stype == "teamtailor":
+        return f"teamtailor:{src.get('tenant') or src.get('feed_url') or src.get('name') or 'unknown'}"
+    if stype == "adzuna":
+        return (
+            f"adzuna:{src.get('country') or 'gb'}:{src.get('what') or 'internship'}:"
+            f"{src.get('where') or 'london'}"
+        )
+    if stype == "reed":
+        return (
+            f"reed:{src.get('keywords') or 'internship'}:"
+            f"{src.get('location') or 'London'}"
+        )
     return f"{stype}:{src.get('name') or 'unknown'}"
 
 
@@ -1178,6 +1630,10 @@ FETCHERS = {
     "avature": fetch_avature,
     "bofa": fetch_bofa,
     "playwright": fetch_playwright,
+    "pinpoint": fetch_pinpoint,
+    "teamtailor": fetch_teamtailor,
+    "adzuna": fetch_adzuna,
+    "reed": fetch_reed,
 }
 
 
@@ -1296,59 +1752,155 @@ def mark_company_notified(token: str, chat_id: str, company_name: str) -> None:
         print(f"[warn] Could not update tracker highlight for {company_name}: {e}")
 
 
+def fetch_source(src: dict[str, Any]) -> tuple[list[dict[str, Any]], str | None]:
+    """Run one source's fetcher. Returns (jobs, error_message)."""
+    stype = src.get("type")
+    try:
+        return FETCHERS[stype](src), None
+    except SourceSkipped as e:
+        return [], f"skip:{e}"
+    except Exception as e:
+        return [], f"error:{e}"
+
+
+def fetch_all_sources(
+    sources: list[dict[str, Any]], workers: int
+) -> list[tuple[dict[str, Any], list[dict[str, Any]], str | None]]:
+    """
+    Fetch every source, HTTP ones in parallel. Playwright sources stay serial:
+    each one launches a browser, so running them concurrently is a memory risk
+    on the free CI runner.
+    """
+    results: dict[int, tuple[list[dict[str, Any]], str | None]] = {}
+    parallel: list[tuple[int, dict[str, Any]]] = []
+    serial: list[tuple[int, dict[str, Any]]] = []
+
+    for i, src in enumerate(sources):
+        (serial if src.get("type") == "playwright" else parallel).append((i, src))
+
+    if parallel:
+        with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+            futures = {pool.submit(fetch_source, src): i for i, src in parallel}
+            for fut in as_completed(futures):
+                results[futures[fut]] = fut.result()
+
+    for i, src in serial:
+        results[i] = fetch_source(src)
+
+    return [(src, *results[i]) for i, src in enumerate(sources)]
+
+
+def job_region_tag(job: dict[str, Any], title: str) -> str:
+    if job_matches_uk_location(job, title):
+        return "UK"
+    if job_matches_us_location(job, title):
+        return "US"
+    return ""
+
+
+def job_location_text(job: dict[str, Any]) -> str:
+    for hint in job.get("location_hints") or []:
+        text = str(hint).strip()
+        if text:
+            return text[:80]
+    return ""
+
+
+def send_priming_summary(token: str, chat_id: str, primed: list[tuple[str, int]]) -> None:
+    """One message for freshly added sources instead of an alert per backlog job."""
+    lines = [
+        f"<b>Now watching {len(primed)} new source(s)</b>",
+        "Existing postings recorded silently; new ones will alert.",
+        "",
+    ]
+    lines += [f"{escape_html(name)} — {count} open match(es)" for name, count in primed]
+    chunk: list[str] = []
+    size = 0
+    for line in lines:
+        if size + len(line) > 3500:
+            telegram_send_html(token, chat_id, "\n".join(chunk))
+            chunk, size = [], 0
+        chunk.append(line)
+        size += len(line) + 1
+    if chunk:
+        telegram_send_html(token, chat_id, "\n".join(chunk))
+
+
 def poll_once(config: dict[str, Any]) -> int:
     token = get_env("TELEGRAM_BOT_TOKEN")
     chat_id = get_env("TELEGRAM_CHAT_ID")
-    keywords = config.get("title_keywords") or ["intern", "internship"]
-    require_any = config.get("title_require_any") or []
-    us_only = location_filter_wants_us_only(config)
+    default_countries = configured_countries(config)
+    prime_new = config.get("prime_new_sources", True)
+    workers = int(config.get("fetch_workers") or 10)
 
     conn = sqlite3.connect(STATE_DB)
     init_db(conn)
 
-    new_count = 0
+    sources = [s for s in (config.get("sources") or []) if s.get("type") in FETCHERS]
     for src in config.get("sources") or []:
+        if src.get("type") not in FETCHERS:
+            print(f"Skip unknown source type: {src.get('type')} ({src.get('name')})")
+
+    new_count = 0
+    primed: list[tuple[str, int]] = []
+
+    for src, jobs, err in fetch_all_sources(sources, workers):
         name = src.get("name") or "unknown"
-        stype = src.get("type")
-        if stype not in FETCHERS:
-            print(f"Skip unknown source type: {stype} ({name})")
+        if err:
+            kind, _, detail = err.partition(":")
+            print(f"[{kind}] {name}: {detail}")
             continue
+
         sk = source_key(src)
-        try:
-            jobs = FETCHERS[stype](src)
-        except Exception as e:
-            print(f"[error] {name}: {e}")
-            continue
+        countries = source_countries(src, default_countries)
+        keywords = source_keywords(config, src)
+        require_any, allow_vague, exclude_any = source_role_filter(config, src)
+        priming = prime_new and source_is_new(conn, sk)
+        primed_count = 0
 
         for job in jobs:
             jid = job["id"]
             title = job["title"]
             url = job["url"]
-            if not title_matches(title, keywords):
+            if not title_passes(title, keywords, require_any, allow_vague, exclude_any):
                 continue
-            if require_any and not title_matches(title, require_any):
-                continue
-            if us_only and not job_matches_us_location(job, title):
+            if not job_matches_countries(job, title, countries):
                 continue
             if already_seen(conn, sk, jid):
                 continue
             mark_seen(conn, sk, jid, title, url)
+
+            if priming:
+                primed_count += 1
+                continue
+
             new_count += 1
+            tag = job_region_tag(job, title)
+            header = "<b>New internship match</b>" + (f" [{tag}]" if tag else "")
+            location = job_location_text(job)
+            subject = escape_html(name)
+            if location:
+                subject += f" — {escape_html(location)}"
             safe_title = escape_html(title)
-            safe_name = escape_html(name)
-            link = url or ""
-            if link:
-                safe_href = html_escape(link, quote=True)
-                body = (
-                    f"<b>New internship match</b>\n"
-                    f"{safe_name}\n"
-                    f'<a href="{safe_href}">{safe_title}</a>'
-                )
+            if url:
+                safe_href = html_escape(url, quote=True)
+                line = f'<a href="{safe_href}">{safe_title}</a>'
             else:
-                body = f"<b>New internship match</b>\n{safe_name}\n{safe_title}"
-            telegram_send_html(token, chat_id, body)
+                line = safe_title
+            telegram_send_html(token, chat_id, f"{header}\n{subject}\n{line}")
             mark_company_notified(token, chat_id, name)
             print(f"Notified: {name} — {title}")
+
+        mark_source_primed(conn, sk)
+        if priming:
+            primed.append((name, primed_count))
+            print(f"Primed new source: {name} ({primed_count} open matches)")
+
+    if primed:
+        try:
+            send_priming_summary(token, chat_id, primed)
+        except Exception as e:
+            print(f"[warn] could not send priming summary: {e}")
 
     conn.close()
     return new_count
