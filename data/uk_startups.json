@@ -1,5 +1,5 @@
 {
- "updated_at": 1790200507,
+ "updated_at": 1790211133,
  "companies": {
   "24symbols": {
    "name": "24Symbols",
@@ -239,7 +239,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 56,
    "signals": {
     "backing": "yc",
@@ -248,6 +248,7 @@
     "team_size": 20,
     "open_roles": 9,
     "uk_roles": 8,
+    "role_delta": 0,
     "engineering_share": 0.22,
     "early_career_roles": 0
    },
@@ -264,6 +265,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 9,
+     "uk_jobs": 8,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 9,
      "uk_jobs": 8,
      "uk_early_career": 0
@@ -356,7 +363,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 65,
    "signals": {
     "backing": "yc",
@@ -365,6 +372,7 @@
     "team_size": 100,
     "open_roles": 33,
     "uk_roles": 11,
+    "role_delta": 0,
     "engineering_share": 0.45,
     "early_career_roles": 0
    },
@@ -381,6 +389,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 33,
+     "uk_jobs": 11,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 33,
      "uk_jobs": 11,
      "uk_early_career": 0
@@ -427,7 +441,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 56,
    "signals": {
     "backing": "yc",
@@ -436,6 +450,7 @@
     "team_size": 85,
     "open_roles": 6,
     "uk_roles": 1,
+    "role_delta": 0,
     "engineering_share": 0.33,
     "early_career_roles": 0
    },
@@ -450,6 +465,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 6,
+     "uk_jobs": 1,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 6,
      "uk_jobs": 1,
      "uk_early_career": 0
@@ -869,7 +890,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 46,
    "signals": {
     "backing": "yc",
@@ -878,6 +899,7 @@
     "team_size": 16,
     "open_roles": 3,
     "uk_roles": 3,
+    "role_delta": 0,
     "engineering_share": 0.33,
     "early_career_roles": 0
    },
@@ -894,6 +916,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 3,
+     "uk_jobs": 3,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 3,
      "uk_jobs": 3,
      "uk_early_career": 0
@@ -1032,7 +1060,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 55,
    "signals": {
     "backing": "yc",
@@ -1040,6 +1068,7 @@
     "team_size": 58,
     "open_roles": 8,
     "uk_roles": 5,
+    "role_delta": 0,
     "engineering_share": 0.88,
     "early_career_roles": 0
    },
@@ -1056,6 +1085,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 8,
+     "uk_jobs": 5,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 8,
      "uk_jobs": 5,
      "uk_early_career": 0
@@ -1076,7 +1111,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 60,
    "signals": {
     "backing": "yc",
@@ -1084,6 +1119,7 @@
     "team_size": 20,
     "open_roles": 16,
     "uk_roles": 7,
+    "role_delta": 0,
     "engineering_share": 0.12,
     "early_career_roles": 0
    },
@@ -1100,6 +1136,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 16,
+     "uk_jobs": 7,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 16,
      "uk_jobs": 7,
      "uk_early_career": 0
@@ -1279,7 +1321,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 68,
    "signals": {
     "backing": "yc",
@@ -1288,6 +1330,7 @@
     "team_size": 90,
     "open_roles": 17,
     "uk_roles": 5,
+    "role_delta": 0,
     "engineering_share": 0.35,
     "early_career_roles": 0
    },
@@ -1304,6 +1347,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 17,
+     "uk_jobs": 5,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 17,
      "uk_jobs": 5,
      "uk_early_career": 0
@@ -1341,7 +1390,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 45,
    "signals": {
     "backing": "yc",
@@ -1349,6 +1398,7 @@
     "team_size": 12,
     "open_roles": 2,
     "uk_roles": 2,
+    "role_delta": 0,
     "engineering_share": 0.5,
     "early_career_roles": 0
    },
@@ -1364,6 +1414,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 2,
+     "uk_jobs": 2,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 2,
      "uk_jobs": 2,
      "uk_early_career": 0
@@ -1579,13 +1635,14 @@
    "note": "warehouse robotics, London",
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
-   "score": 34,
+   "last_checked": 1790211133,
+   "score": 32,
    "signals": {
     "backing": "curated",
     "open_roles": 31,
     "uk_roles": 3,
-    "engineering_share": 0.26,
+    "role_delta": 0,
+    "engineering_share": 0.0,
     "early_career_roles": 0
    },
    "board": {
@@ -1601,6 +1658,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 31,
+     "uk_jobs": 3,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 31,
      "uk_jobs": 3,
      "uk_early_career": 0
@@ -1718,7 +1781,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 59,
    "signals": {
     "backing": "yc",
@@ -1727,6 +1790,7 @@
     "team_size": 55,
     "open_roles": 12,
     "uk_roles": 9,
+    "role_delta": 0,
     "engineering_share": 0.33,
     "early_career_roles": 0
    },
@@ -1743,6 +1807,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 12,
+     "uk_jobs": 9,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 12,
      "uk_jobs": 9,
      "uk_early_career": 0
@@ -1866,12 +1936,13 @@
    "note": "voice AI, London",
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 40,
    "signals": {
     "backing": "curated",
     "open_roles": 226,
     "uk_roles": 56,
+    "role_delta": 0,
     "engineering_share": 0.25,
     "early_career_roles": 0
    },
@@ -1888,6 +1959,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 226,
+     "uk_jobs": 56,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 226,
      "uk_jobs": 56,
      "uk_early_career": 0
@@ -1942,7 +2019,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 61,
    "signals": {
     "backing": "yc",
@@ -1951,6 +2028,7 @@
     "team_size": 20,
     "open_roles": 7,
     "uk_roles": 6,
+    "role_delta": 0,
     "engineering_share": 0.43,
     "early_career_roles": 0
    },
@@ -1967,6 +2045,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 7,
+     "uk_jobs": 6,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 7,
      "uk_jobs": 6,
      "uk_early_career": 0
@@ -2023,7 +2107,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 67,
    "signals": {
     "backing": "yc",
@@ -2032,6 +2116,7 @@
     "team_size": 150,
     "open_roles": 38,
     "uk_roles": 22,
+    "role_delta": 0,
     "engineering_share": 0.45,
     "early_career_roles": 0
    },
@@ -2048,6 +2133,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 38,
+     "uk_jobs": 22,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 38,
      "uk_jobs": 22,
      "uk_early_career": 0
@@ -2314,7 +2405,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 59,
    "signals": {
     "backing": "yc",
@@ -2323,6 +2414,7 @@
     "team_size": 100,
     "open_roles": 10,
     "uk_roles": 8,
+    "role_delta": 0,
     "engineering_share": 0.0,
     "early_career_roles": 0
    },
@@ -2339,6 +2431,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 10,
+     "uk_jobs": 8,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 10,
      "uk_jobs": 8,
      "uk_early_career": 0
@@ -2487,7 +2585,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 65,
    "signals": {
     "backing": "yc",
@@ -2496,6 +2594,7 @@
     "team_size": 170,
     "open_roles": 46,
     "uk_roles": 40,
+    "role_delta": 0,
     "engineering_share": 0.15,
     "early_career_roles": 0
    },
@@ -2512,6 +2611,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 46,
+     "uk_jobs": 40,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 46,
      "uk_jobs": 40,
      "uk_early_career": 0
@@ -2840,7 +2945,7 @@
    },
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 55,
    "signals": {
     "backing": "yc",
@@ -2849,6 +2954,7 @@
     "team_size": 900,
     "open_roles": 27,
     "uk_roles": 9,
+    "role_delta": 0,
     "engineering_share": 0.37,
     "early_career_roles": 0
    },
@@ -2865,6 +2971,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 27,
+     "uk_jobs": 9,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 27,
      "uk_jobs": 9,
      "uk_early_career": 0
@@ -2957,12 +3069,13 @@
    "note": "AI notes, London/NYC",
    "first_seen": 1790200262,
    "status": "watching",
-   "last_checked": 1790200484,
+   "last_checked": 1790211133,
    "score": 36,
    "signals": {
     "backing": "curated",
     "open_roles": 18,
     "uk_roles": 12,
+    "role_delta": 0,
     "engineering_share": 0.44,
     "early_career_roles": 0
    },
@@ -2979,6 +3092,12 @@
    "history": [
     {
      "ts": 1790200484,
+     "jobs": 18,
+     "uk_jobs": 12,
+     "uk_early_career": 0
+    },
+    {
+     "ts": 1790211133,
      "jobs": 18,
      "uk_jobs": 12,
      "uk_early_career": 0
@@ -3076,15 +3195,16 @@
   "lendable": {
    "name": "Lendable",
    "domain": "lendable.co.uk",
-   "seed_source": "manual",
+   "seed_source": "curated",
    "first_seen": 1790200500,
    "status": "watching",
-   "last_checked": 1790200507,
+   "last_checked": 1790211133,
    "score": 56,
    "signals": {
-    "backing": "manual",
+    "backing": "curated",
     "open_roles": 73,
     "uk_roles": 63,
+    "role_delta": 0,
     "engineering_share": 0.3,
     "early_career_roles": 4
    },
@@ -3104,8 +3224,3014 @@
      "jobs": 73,
      "uk_jobs": 63,
      "uk_early_career": 4
+    },
+    {
+     "ts": 1790211133,
+     "jobs": 73,
+     "uk_jobs": 63,
+     "uk_early_career": 4
+    }
+   ],
+   "note": "consumer credit, London"
+  },
+  "happl": {
+   "name": "Happl",
+   "domain": "happl.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2022",
+    "stage": "Growth",
+    "team_size": 11,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 53,
+   "signals": {
+    "backing": "yc",
+    "batch": "Winter 2022",
+    "stage": "Growth",
+    "team_size": 11,
+    "open_roles": 5,
+    "uk_roles": 5,
+    "engineering_share": 0.2,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Happl",
+    "type": "ashby",
+    "board_slug": "happl"
+   },
+   "sample_roles": [
+    "Business Development Representative",
+    "Backend Engineer",
+    "Sales Development Representative"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 5,
+     "uk_jobs": 5,
+     "uk_early_career": 0
     }
    ]
+  },
+  "harbrdata": {
+   "name": "Harbrdata",
+   "domain": "harbrdata.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "healthtech-1": {
+   "name": "Healthtech 1",
+   "domain": "healthtech1.uk",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2023",
+    "stage": "Early",
+    "team_size": 40,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 53,
+   "signals": {
+    "backing": "yc",
+    "batch": "Summer 2023",
+    "team_size": 40,
+    "open_roles": 4,
+    "uk_roles": 4,
+    "engineering_share": 0.5,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Healthtech 1",
+    "type": "ashby",
+    "board_slug": "Healthtech-1"
+   },
+   "sample_roles": [
+    "Senior AI engineer",
+    "Join our talent pool!",
+    "Senior Clinical Account Executive"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 4,
+     "uk_jobs": 4,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "helicarrier-prev-buycoins": {
+   "name": "Helicarrier (prev Buycoins)",
+   "domain": "helicarrier.studio",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2018",
+    "stage": "Early",
+    "team_size": 30,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "helixdb": {
+   "name": "HelixDB",
+   "domain": "helix-db.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2025",
+    "stage": "Early",
+    "team_size": 6,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "helloflow": {
+   "name": "Helloflow",
+   "domain": "helloflow.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "heptabase": {
+   "name": "Heptabase",
+   "domain": "heptabase.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2022",
+    "stage": "Early",
+    "team_size": 10,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Consumer"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "heroic-labs": {
+   "name": "Heroic Labs",
+   "domain": "heroiclabs.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2015",
+    "stage": "Growth",
+    "team_size": 21,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Consumer"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hessian": {
+   "name": "Hessian",
+   "domain": "hessian.sh",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2026",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hi": {
+   "name": "Hi",
+   "domain": "hi.health",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hijack": {
+   "name": "Hijack",
+   "domain": "hijack.bio",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hirebolt": {
+   "name": "Hirebolt",
+   "domain": "hirebolt.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2021",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hole19golf": {
+   "name": "Hole19Golf",
+   "domain": "hole19golf.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "holvi": {
+   "name": "Holvi",
+   "domain": "holvi.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hopin": {
+   "name": "Hopin",
+   "domain": "hopin.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hrharriet": {
+   "name": "Hrharriet",
+   "domain": "hrharriet.com",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hubblehq": {
+   "name": "Hubblehq",
+   "domain": "hubblehq.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hubflo": {
+   "name": "Hubflo",
+   "domain": "hubflo.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hubuc": {
+   "name": "HUBUC",
+   "domain": "hubuc.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2021",
+    "stage": "Early",
+    "team_size": 11,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "huma": {
+   "name": "Huma",
+   "domain": "huma.com",
+   "seed_source": "curated",
+   "note": "digital health, London",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "humaans": {
+   "name": "Humaans",
+   "domain": "humaans.io",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2021",
+    "stage": "Growth",
+    "team_size": 48,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 60,
+   "signals": {
+    "backing": "yc",
+    "batch": "Winter 2021",
+    "stage": "Growth",
+    "team_size": 48,
+    "open_roles": 14,
+    "uk_roles": 12,
+    "engineering_share": 0.36,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Humaans",
+    "type": "ashby",
+    "board_slug": "humaans"
+   },
+   "sample_roles": [
+    "Product Design Lead",
+    "Software Engineer (Full Stack)",
+    "Senior Product Designer"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 14,
+     "uk_jobs": 12,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "humanity": {
+   "name": "Humanity",
+   "domain": "humanity.health",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "humanloop": {
+   "name": "Humanloop",
+   "domain": "humanloop.com",
+   "seed_source": "curated",
+   "note": "LLM tooling, London",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hurree": {
+   "name": "Hurree",
+   "domain": "hurree.co",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "hyperexponential": {
+   "name": "hyperexponential",
+   "domain": "hyperexponential.com",
+   "seed_source": "curated",
+   "note": "insurance pricing, London",
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 43,
+   "signals": {
+    "backing": "curated",
+    "open_roles": 28,
+    "uk_roles": 19,
+    "engineering_share": 0.29,
+    "early_career_roles": 1
+   },
+   "board": {
+    "name": "hyperexponential",
+    "type": "ashby",
+    "board_slug": "hyperexponential"
+   },
+   "sample_roles": [
+    "Associate Delivery Engineer",
+    "hx Model Developer",
+    "Product Marketing Manager"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 28,
+     "uk_jobs": 19,
+     "uk_early_career": 1
+    }
+   ]
+  },
+  "hyperpad": {
+   "name": "Hyperpad",
+   "domain": "hyperpad.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2014",
+    "stage": "Early",
+    "team_size": 4,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Consumer"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "ideate-xyz": {
+   "name": "ideate.xyz",
+   "domain": "ideate.xyz",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2024",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "indices": {
+   "name": "Indices",
+   "domain": "indices.io",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "inovia": {
+   "name": "Inovia",
+   "domain": "inovia.bio",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "instinct-space": {
+   "name": "Instinct Space",
+   "domain": "instinct-space.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2025",
+    "stage": "Early",
+    "team_size": 5,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Industrials"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "institutional": {
+   "name": "Institutional",
+   "domain": "institutional.octopusinvestments.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "inth": {
+   "name": "Inth",
+   "domain": "inth.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2026",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "isidor": {
+   "name": "Isidor",
+   "domain": "isidor.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 35,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 4,
+    "uk_roles": 4,
+    "engineering_share": 0.5,
+    "early_career_roles": 1
+   },
+   "board": {
+    "name": "Isidor",
+    "type": "greenhouse",
+    "board_token": "isidor"
+   },
+   "sample_roles": [
+    "Forward Deployed Engineer",
+    "Founding Engineer",
+    "Intern"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 4,
+     "uk_jobs": 4,
+     "uk_early_career": 1
+    }
+   ]
+  },
+  "isomorphic-labs": {
+   "name": "Isomorphic Labs",
+   "domain": "isomorphiclabs.com",
+   "seed_source": "curated",
+   "note": "AI drug discovery, London",
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 41,
+   "signals": {
+    "backing": "curated",
+    "open_roles": 28,
+    "uk_roles": 16,
+    "engineering_share": 0.57,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Isomorphic Labs",
+    "type": "greenhouse",
+    "board_token": "isomorphiclabs"
+   },
+   "sample_roles": [
+    "Application Support Engineer (Third Party Systems), London",
+    "Bioanalytical Lead, London",
+    "Bioinformatics Engineer, London"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 28,
+     "uk_jobs": 16,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "itchpet": {
+   "name": "Itchpet",
+   "domain": "itchpet.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "james": {
+   "name": "James",
+   "domain": "james.finance",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "jeeran": {
+   "name": "Jeeran",
+   "domain": "jeeran.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "jigcar": {
+   "name": "Jigcar",
+   "domain": "jigcar.com",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "jobdoh": {
+   "name": "Jobdoh",
+   "domain": "jobdoh.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "join-stories": {
+   "name": "Join Stories",
+   "domain": "join-stories.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "joinstepladder": {
+   "name": "Joinstepladder",
+   "domain": "joinstepladder.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "juliennebruno": {
+   "name": "Juliennebruno",
+   "domain": "juliennebruno.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "junction": {
+   "name": "Junction",
+   "domain": "junction.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2020",
+    "stage": "Growth",
+    "team_size": 19,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 51,
+   "signals": {
+    "backing": "yc",
+    "batch": "Winter 2020",
+    "stage": "Growth",
+    "team_size": 19,
+    "open_roles": 12,
+    "uk_roles": 3,
+    "engineering_share": 0.25,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Junction",
+    "type": "ashby",
+    "board_slug": "junction"
+   },
+   "sample_roles": [
+    "Product Engineer",
+    "Technical Recruiter",
+    "Engineering Manager"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 12,
+     "uk_jobs": 3,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "juno": {
+   "name": "Juno",
+   "domain": "junocompanion.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2026",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "juro": {
+   "name": "Juro",
+   "domain": "juro.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 22,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 3,
+    "uk_roles": 2,
+    "engineering_share": 0.0,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Juro",
+    "type": "ashby",
+    "board_slug": "juro"
+   },
+   "sample_roles": [
+    "Senior Product Manager",
+    "Interim Finance Director"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 3,
+     "uk_jobs": 2,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "kanda": {
+   "name": "Kanda",
+   "domain": "getkanda.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2021",
+    "stage": "Early",
+    "team_size": 8,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kareinn": {
+   "name": "Kareinn",
+   "domain": "kareinn.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kasko": {
+   "name": "Kasko",
+   "domain": "kasko.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kenley": {
+   "name": "Kenley",
+   "domain": "kenley.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2024",
+    "stage": "Early",
+    "team_size": 6,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kenobi": {
+   "name": "Kenobi",
+   "domain": "kenobi.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2022",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kerys": {
+   "name": "Kerys",
+   "domain": "kerys.software",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kitch": {
+   "name": "Kitch",
+   "domain": "kitch.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "klasha": {
+   "name": "Klasha",
+   "domain": "klasha.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "knostic": {
+   "name": "Knostic",
+   "domain": "knostic.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kraken": {
+   "name": "Kraken",
+   "domain": "kraken.tech",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kubeark": {
+   "name": "Kubeark",
+   "domain": "kubeark.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "kular": {
+   "name": "Kular",
+   "domain": "kular.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2022",
+    "stage": "Early",
+    "team_size": 12,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "labgenius": {
+   "name": "Labgenius",
+   "domain": "labgeni.us",
+   "seed_source": "curated",
+   "note": "protein engineering, London",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "labstep": {
+   "name": "Labstep",
+   "domain": "labstep.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "lafraise": {
+   "name": "Lafraise",
+   "domain": "lafraise.pro",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "laminar": {
+   "name": "Laminar",
+   "domain": "laminar.sh",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2024",
+    "stage": "Early",
+    "team_size": 6,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "land": {
+   "name": "Land",
+   "domain": "land.tech",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "landh": {
+   "name": "Landh",
+   "domain": "landh.tech",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "landmark": {
+   "name": "Landmark",
+   "domain": "landmark.games",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "lateral": {
+   "name": "Lateral",
+   "domain": "lateral.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "leanmedical": {
+   "name": "Leanmedical",
+   "domain": "leanmedical.ai",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "leeroo": {
+   "name": "Leeroo",
+   "domain": "leeroo.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2025",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "legit": {
+   "name": "Legit",
+   "domain": "legit.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "legora": {
+   "name": "Legora",
+   "domain": "legora.com",
+   "seed_source": "curated",
+   "note": "legal AI, London/Stockholm",
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 41,
+   "signals": {
+    "backing": "curated",
+    "open_roles": 284,
+    "uk_roles": 36,
+    "engineering_share": 0.38,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Legora",
+    "type": "ashby",
+    "board_slug": "legora"
+   },
+   "sample_roles": [
+    "Director of People Operations",
+    "Engagement Manager",
+    "Business Development Representative"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 284,
+     "uk_jobs": 36,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "lemfi": {
+   "name": "LemFi",
+   "domain": "lemfi.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2021",
+    "stage": "Growth",
+    "team_size": 500,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 55,
+   "signals": {
+    "backing": "yc",
+    "batch": "Summer 2021",
+    "stage": "Growth",
+    "team_size": 500,
+    "open_roles": 15,
+    "uk_roles": 10,
+    "engineering_share": 0.2,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "LemFi",
+    "type": "ashby",
+    "board_slug": "lemfi"
+   },
+   "sample_roles": [
+    "Senior Growth Manager - UK Chinese Community",
+    "Senior Platform Engineer",
+    "Senior Accountant - Finance Transformation"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 15,
+     "uk_jobs": 10,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "let-s-do-this": {
+   "name": "Let's Do This",
+   "domain": "letsdothis.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2018",
+    "stage": "Growth",
+    "team_size": 75,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Consumer"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "libryo": {
+   "name": "Libryo",
+   "domain": "libryo.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "light": {
+   "name": "Light",
+   "domain": "light.inc",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 39,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 14,
+    "uk_roles": 13,
+    "engineering_share": 0.14,
+    "early_career_roles": 1
+   },
+   "board": {
+    "name": "Light",
+    "type": "ashby",
+    "board_slug": "light-inc"
+   },
+   "sample_roles": [
+    "Business Development Representative",
+    "Product Manager",
+    "Product Marketer"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 14,
+     "uk_jobs": 13,
+     "uk_early_career": 1
+    }
+   ]
+  },
+  "lightdash": {
+   "name": "Lightdash",
+   "domain": "lightdash.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2020",
+    "stage": "Growth",
+    "team_size": 23,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 49,
+   "signals": {
+    "backing": "yc",
+    "batch": "Summer 2020",
+    "stage": "Growth",
+    "team_size": 23,
+    "open_roles": 2,
+    "uk_roles": 1,
+    "engineering_share": 0.5,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Lightdash",
+    "type": "ashby",
+    "board_slug": "lightdash"
+   },
+   "sample_roles": [
+    "Technical Account Executive"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 2,
+     "uk_jobs": 1,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "lightmeter": {
+   "name": "Lightmeter",
+   "domain": "lightmeter.io",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2022",
+    "stage": "Early",
+    "team_size": 5,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "limborevolution": {
+   "name": "Limborevolution",
+   "domain": "limborevolution.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "lindushealth": {
+   "name": "Lindushealth",
+   "domain": "lindushealth.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 21,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 3,
+    "uk_roles": 1,
+    "engineering_share": 0.0,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Lindushealth",
+    "type": "ashby",
+    "board_slug": "lindus"
+   },
+   "sample_roles": [
+    "Director of Biostatistics"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 3,
+     "uk_jobs": 1,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "linkup": {
+   "name": "Linkup",
+   "domain": "linkup.so",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "liv": {
+   "name": "Liv",
+   "domain": "liv.tv",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "liveblocks": {
+   "name": "Liveblocks",
+   "domain": "liveblocks.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "liveflow": {
+   "name": "Liveflow",
+   "domain": "liveflow.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "lodgify": {
+   "name": "Lodgify",
+   "domain": "lodgify.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "lua-global-inc": {
+   "name": "Lua Global Inc",
+   "domain": "heylua.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Fall 2025",
+    "stage": "Early",
+    "team_size": 5,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "luminance": {
+   "name": "Luminance",
+   "domain": "luminance.com",
+   "seed_source": "curated",
+   "note": "legal AI, Cambridge/London",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "machinations": {
+   "name": "Machinations",
+   "domain": "machinations.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "manara": {
+   "name": "Manara",
+   "domain": "manara.tech",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "marblism": {
+   "name": "Marblism",
+   "domain": "marblism.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2024",
+    "stage": "Early",
+    "team_size": 5,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "marcopololearning": {
+   "name": "Marcopololearning",
+   "domain": "marcopololearning.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "marshmallow": {
+   "name": "Marshmallow",
+   "domain": "marshmallow.com",
+   "seed_source": "curated",
+   "note": "insurtech, London",
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 34,
+   "signals": {
+    "backing": "curated",
+    "open_roles": 12,
+    "uk_roles": 11,
+    "engineering_share": 0.42,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Marshmallow",
+    "type": "ashby",
+    "board_slug": "marshmallow"
+   },
+   "sample_roles": [
+    "Pricing Data Scientist",
+    "Principal Data Scientist",
+    "Staff Data Scientist"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 12,
+     "uk_jobs": 11,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "martie": {
+   "name": "Martie",
+   "domain": "martie.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "massive-dynamic": {
+   "name": "Massive Dynamic",
+   "domain": "massive-dynamic.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "maze": {
+   "name": "Maze",
+   "domain": "maze.co",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 35,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 7,
+    "uk_roles": 6,
+    "engineering_share": 0.71,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Maze",
+    "type": "ashby",
+    "board_slug": "mazedesign"
+   },
+   "sample_roles": [
+    "Senior Full Stack Product Engineer (TypeScript)",
+    "Head of Market Research | AI-Native Research (Remote US/EU)",
+    "Head of GTM, Research Services | AI-Native Research (Remote US/EU)"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 7,
+     "uk_jobs": 6,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "medall": {
+   "name": "Medall",
+   "domain": "medall.org",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "medefer": {
+   "name": "Medefer",
+   "domain": "medefer.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 17,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 1,
+    "uk_roles": 1,
+    "engineering_share": 0.0,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Medefer",
+    "type": "teamtailor",
+    "tenant": "medefer"
+   },
+   "sample_roles": [
+    "RN Dementia Coordinator"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 1,
+     "uk_jobs": 1,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "medisearch": {
+   "name": "MediSearch",
+   "domain": "medisearch.io",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2023",
+    "stage": "Early",
+    "team_size": 6,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "medusajs": {
+   "name": "Medusajs",
+   "domain": "medusajs.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "meetciao": {
+   "name": "Meetciao",
+   "domain": "meetciao.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "meetdex": {
+   "name": "Meetdex",
+   "domain": "meetdex.ai",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "meilisearch": {
+   "name": "Meilisearch",
+   "domain": "meilisearch.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "memories": {
+   "name": "Memories",
+   "domain": "memories.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "menza": {
+   "name": "Menza",
+   "domain": "menza.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2026",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "metaview": {
+   "name": "Metaview",
+   "domain": "metaview.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 37,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 33,
+    "uk_roles": 13,
+    "engineering_share": 0.06,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Metaview",
+    "type": "ashby",
+    "board_slug": "metaview"
+   },
+   "sample_roles": [
+    "Engagement Associate",
+    "Sales Development Representative",
+    "Customer Growth Manager"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 33,
+     "uk_jobs": 13,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "meticulous": {
+   "name": "Meticulous",
+   "domain": "meticulous.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2021",
+    "stage": "Growth",
+    "team_size": 15,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 60,
+   "signals": {
+    "backing": "yc",
+    "batch": "Summer 2021",
+    "stage": "Growth",
+    "team_size": 15,
+    "open_roles": 6,
+    "uk_roles": 5,
+    "engineering_share": 0.83,
+    "early_career_roles": 1
+   },
+   "board": {
+    "name": "Meticulous",
+    "type": "ashby",
+    "board_slug": "meticulous"
+   },
+   "sample_roles": [
+    "Software Engineer",
+    "Forward Deployed Engineer (New Grad)",
+    "Platform Engineer"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 6,
+     "uk_jobs": 5,
+     "uk_early_career": 1
+    }
+   ]
+  },
+  "metofico": {
+   "name": "Metofico",
+   "domain": "metofico.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2024",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "metoro": {
+   "name": "Metoro",
+   "domain": "metoro.io",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2023",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "miden": {
+   "name": "Miden",
+   "domain": "miden.co",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2024",
+    "stage": "Early",
+    "team_size": 19,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "millimetric": {
+   "name": "Millimetric",
+   "domain": "millimetric.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "milliray": {
+   "name": "Milliray",
+   "domain": "milliray.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2026",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Industrials"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "mimohq": {
+   "name": "Mimohq",
+   "domain": "mimohq.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "mindee": {
+   "name": "Mindee",
+   "domain": "mindee.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2021",
+    "stage": "Growth",
+    "team_size": 60,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "mindmax": {
+   "name": "Mindmax",
+   "domain": "mindmax.it",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "mindsdb": {
+   "name": "Mindsdb",
+   "domain": "mindsdb.com",
+   "seed_source": "curated",
+   "note": "AI data platform",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "minimum": {
+   "name": "Minimum",
+   "domain": "minimum.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2020",
+    "stage": "Early",
+    "team_size": null,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "Industrials"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "minubo": {
+   "name": "Minubo",
+   "domain": "minubo.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "miru-labs": {
+   "name": "Miru Labs",
+   "domain": "miru-labs.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "mlop": {
+   "name": "mlop",
+   "domain": "mlop.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2025",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "model-ml": {
+   "name": "Model ML",
+   "domain": "modelml.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2024",
+    "stage": "Growth",
+    "team_size": 180,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "modernbanc": {
+   "name": "Modernbanc",
+   "domain": "modernbanc.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2020",
+    "stage": "Early",
+    "team_size": 6,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "monese": {
+   "name": "Monese",
+   "domain": "monese.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "monzo": {
+   "name": "Monzo",
+   "domain": "monzo.com",
+   "seed_source": "curated",
+   "note": "neobank, London",
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 47,
+   "signals": {
+    "backing": "curated",
+    "open_roles": 71,
+    "uk_roles": 56,
+    "engineering_share": 0.42,
+    "early_career_roles": 1
+   },
+   "board": {
+    "name": "Monzo",
+    "type": "greenhouse",
+    "board_token": "monzo"
+   },
+   "sample_roles": [
+    "Anaplan Support Analyst",
+    "Android Engineer",
+    "Backend Engineer III"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 71,
+     "uk_jobs": 56,
+     "uk_early_career": 1
+    }
+   ]
+  },
+  "motives": {
+   "name": "Motives",
+   "domain": "motives.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2025",
+    "stage": "Early",
+    "team_size": null,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "motley": {
+   "name": "Motley",
+   "domain": "motley.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "motormia": {
+   "name": "Motormia",
+   "domain": "motormia.co",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "movablevoice": {
+   "name": "Movablevoice",
+   "domain": "movablevoice.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "muchbetteradventures": {
+   "name": "Muchbetteradventures",
+   "domain": "muchbetteradventures.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "multiverse": {
+   "name": "Multiverse",
+   "domain": "multiverse.io",
+   "seed_source": "curated",
+   "note": "apprenticeships, London",
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 35,
+   "signals": {
+    "backing": "curated",
+    "open_roles": 19,
+    "uk_roles": 19,
+    "engineering_share": 0.16,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Multiverse",
+    "type": "ashby",
+    "board_slug": "multiverse"
+   },
+   "sample_roles": [
+    "Enterprise Account Executive, UK",
+    "Mid Market Account Executive, UK",
+    "Senior Product Marketing Manager"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 19,
+     "uk_jobs": 19,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "muzz": {
+   "name": "Muzz",
+   "domain": "muzz.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2017",
+    "stage": "Growth",
+    "team_size": 104,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "Consumer"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "mybuilder": {
+   "name": "Mybuilder",
+   "domain": "mybuilder.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "myparla": {
+   "name": "Myparla",
+   "domain": "myparla.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "mytos": {
+   "name": "Mytos",
+   "domain": "mytos.bio",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2018",
+    "stage": "Early",
+    "team_size": 26,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 64,
+   "signals": {
+    "backing": "yc",
+    "batch": "Summer 2018",
+    "team_size": 26,
+    "open_roles": 11,
+    "uk_roles": 11,
+    "engineering_share": 0.45,
+    "early_career_roles": 2
+   },
+   "board": {
+    "name": "Mytos",
+    "type": "lever",
+    "company_slug": "mytos"
+   },
+   "sample_roles": [
+    "Chief of Staff",
+    "Engineering Technician",
+    "General Opportunity"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 11,
+     "uk_jobs": 11,
+     "uk_early_career": 2
+    }
+   ]
+  },
+  "nanograb": {
+   "name": "Nanograb",
+   "domain": "nanograb.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2023",
+    "stage": "Early",
+    "team_size": 5,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nodeslinks": {
+   "name": "Nodeslinks",
+   "domain": "nodeslinks.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nodi-energy": {
+   "name": "NODI Energy",
+   "domain": "nodienergy.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2025",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Industrials"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nopan": {
+   "name": "Nopan",
+   "domain": "nopan.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nordigen": {
+   "name": "Nordigen",
+   "domain": "nordigen.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nothing": {
+   "name": "Nothing",
+   "domain": "nothing.tech",
+   "seed_source": "curated",
+   "note": "consumer hardware, London",
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 29,
+   "signals": {
+    "backing": "curated",
+    "open_roles": 9,
+    "uk_roles": 5,
+    "engineering_share": 0.22,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Nothing",
+    "type": "greenhouse",
+    "board_token": "nothing"
+   },
+   "sample_roles": [
+    "Ecommerce Executive",
+    "Growth Lead, Subscription Products",
+    "Head of Data"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 9,
+     "uk_jobs": 5,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "nsave": {
+   "name": "nsave",
+   "domain": "nsave.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2022",
+    "stage": "Growth",
+    "team_size": 20,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nu-quantum": {
+   "name": "Nu Quantum",
+   "domain": "nu-quantum.com",
+   "seed_source": "curated",
+   "note": "quantum networking, Cambridge",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nuntius-therapeutics": {
+   "name": "Nuntius Therapeutics",
+   "domain": "nuntiustx.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2021",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "nurture": {
+   "name": "Nurture",
+   "domain": "nurture.is",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "ochre-bio": {
+   "name": "Ochre Bio",
+   "domain": "ochre-bio.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2020",
+    "stage": "Growth",
+    "team_size": 50,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "octopus-realestate": {
+   "name": "Octopus Realestate",
+   "domain": "octopus-realestate.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "octopusgroup": {
+   "name": "Octopusgroup",
+   "domain": "octopusgroup.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "octopusinvestments": {
+   "name": "Octopusinvestments",
+   "domain": "octopusinvestments.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "officely": {
+   "name": "Officely",
+   "domain": "getofficely.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2017",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "omniscient": {
+   "name": "Omniscient",
+   "domain": "omniscient.so",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "oneshot": {
+   "name": "Oneshot",
+   "domain": "oneshot.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "ontik": {
+   "name": "Ontik",
+   "domain": "ontik.io",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "opereit": {
+   "name": "Opereit",
+   "domain": "opereit.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "opio": {
+   "name": "Opio",
+   "domain": "opio.fi",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "oradian": {
+   "name": "Oradian",
+   "domain": "oradian.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "orbital": {
+   "name": "Orbital",
+   "domain": "orbital.tech",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 38,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 23,
+    "uk_roles": 11,
+    "engineering_share": 0.26,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Orbital",
+    "type": "ashby",
+    "board_slug": "orbital"
+   },
+   "sample_roles": [
+    "Product Engineer",
+    "Legal Solutions Architect  (CRE Lawyer)",
+    "Product Engineer"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 23,
+     "uk_jobs": 11,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "ossprey": {
+   "name": "Ossprey",
+   "domain": "ossprey.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "oto": {
+   "name": "Oto",
+   "domain": "joinoto.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2022",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Healthcare"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "our-world-in-data": {
+   "name": "Our World in Data",
+   "domain": "ourworldindata.org",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2019",
+    "stage": "Early",
+    "team_size": 19,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Education"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "outpost": {
+   "name": "Outpost",
+   "domain": "outpost.bio",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "outverse": {
+   "name": "Outverse",
+   "domain": "outverse.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "oxa": {
+   "name": "Oxa",
+   "domain": "oxa.tech",
+   "seed_source": "curated",
+   "note": "autonomous vehicles, Oxford",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "paceup": {
+   "name": "Paceup",
+   "domain": "paceup.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pacific": {
+   "name": "Pacific",
+   "domain": "pacific.space",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2026",
+    "stage": "Early",
+    "team_size": 6,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Industrials"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "paid": {
+   "name": "Paid",
+   "domain": "paid.co.uk",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 21,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 3,
+    "uk_roles": 1,
+    "engineering_share": 0.0,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Paid",
+    "type": "ashby",
+    "board_slug": "paid"
+   },
+   "sample_roles": [
+    "Operations Associate"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 3,
+     "uk_jobs": 1,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "pairnow": {
+   "name": "Pairnow",
+   "domain": "pairnow.ai",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "papayadash": {
+   "name": "Papayadash",
+   "domain": "papayadash.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "papercup": {
+   "name": "Papercup",
+   "domain": "papercup.com",
+   "seed_source": "curated",
+   "note": "AI dubbing, London",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "parsewise": {
+   "name": "Parsewise",
+   "domain": "parsewise.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2025",
+    "stage": "Early",
+    "team_size": 6,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "passbase": {
+   "name": "Passbase",
+   "domain": "passbase.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "passfort": {
+   "name": "Passfort",
+   "domain": "passfort.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "patientsknowbest": {
+   "name": "Patientsknowbest",
+   "domain": "patientsknowbest.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pauatech": {
+   "name": "Pauatech",
+   "domain": "pauatech.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pave": {
+   "name": "Pave",
+   "domain": "pave.co.uk",
+   "seed_source": "curated",
+   "note": "credit building, London",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "payvyne": {
+   "name": "Payvyne",
+   "domain": "payvyne.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "peace": {
+   "name": "Peace",
+   "domain": "peace.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "peak": {
+   "name": "Peak",
+   "domain": "peak.ai",
+   "seed_source": "curated",
+   "note": "decision intelligence, Manchester",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pelikan-mobility": {
+   "name": "Pelikan Mobility",
+   "domain": "pelikan-mobility.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "penelope": {
+   "name": "Penelope",
+   "domain": "penelope.health",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pento": {
+   "name": "Pento",
+   "domain": "pento.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "peony": {
+   "name": "Peony",
+   "domain": "peony.ink",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "peopleforce": {
+   "name": "Peopleforce",
+   "domain": "peopleforce.io",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "peppy": {
+   "name": "Peppy",
+   "domain": "peppy.health",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "permutive": {
+   "name": "Permutive",
+   "domain": "permutive.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2014",
+    "stage": "Growth",
+    "team_size": 205,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 49,
+   "signals": {
+    "backing": "yc",
+    "batch": "Summer 2014",
+    "stage": "Growth",
+    "team_size": 205,
+    "open_roles": 4,
+    "uk_roles": 1,
+    "engineering_share": 0.25,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Permutive",
+    "type": "ashby",
+    "board_slug": "permutive"
+   },
+   "sample_roles": [
+    "Staff Applied Scientist (Perm or Contract)"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 4,
+     "uk_jobs": 1,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "phase-biolabs": {
+   "name": "Phase Biolabs",
+   "domain": "phasebiolabs.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2022",
+    "stage": "Early",
+    "team_size": 10,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Industrials"
+   },
+   "first_seen": 1790210781,
+   "status": "watching",
+   "last_checked": 1790211133,
+   "score": 46,
+   "signals": {
+    "backing": "yc",
+    "batch": "Winter 2022",
+    "team_size": 10,
+    "open_roles": 1,
+    "uk_roles": 1,
+    "engineering_share": 1.0,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Phase Biolabs",
+    "type": "ashby",
+    "board_slug": "phasebiolabs"
+   },
+   "sample_roles": [
+    "General Pool (Engineering Talent)"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 1,
+     "uk_jobs": 1,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "phasecraft": {
+   "name": "Phasecraft",
+   "domain": "phasecraft.io",
+   "seed_source": "curated",
+   "note": "quantum algorithms, Bristol/London",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "picnic": {
+   "name": "Picnic",
+   "domain": "picnic.photos",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "piggy-robotics": {
+   "name": "Piggy Robotics",
+   "domain": "piggyrobotics.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Fall 2025",
+    "stage": "Early",
+    "team_size": 5,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Industrials"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "plakar": {
+   "name": "Plakar",
+   "domain": "plakar.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "plate-iq": {
+   "name": "Plate IQ",
+   "domain": "plateiq.com",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Summer 2015",
+    "stage": "Growth",
+    "team_size": 200,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Fintech"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "platogo": {
+   "name": "Platogo",
+   "domain": "platogo.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "playgap": {
+   "name": "Playgap",
+   "domain": "playgap.io",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "playter": {
+   "name": "Playter",
+   "domain": "playter.co",
+   "seed_source": "vc:concept",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "plend": {
+   "name": "Plend",
+   "domain": "plend.co.uk",
+   "seed_source": "curated",
+   "note": "lending, London",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pleo": {
+   "name": "Pleo",
+   "domain": "pleo.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "below_threshold",
+   "last_checked": 1790211133,
+   "score": 40,
+   "signals": {
+    "backing": "vc:seedcamp",
+    "open_roles": 35,
+    "uk_roles": 17,
+    "engineering_share": 0.2,
+    "early_career_roles": 0
+   },
+   "board": {
+    "name": "Pleo",
+    "type": "ashby",
+    "board_slug": "pleo"
+   },
+   "sample_roles": [
+    "Account Manager UKI",
+    "Solution Engineer - UK/I",
+    "Account Executive UK/I"
+   ],
+   "history": [
+    {
+     "ts": 1790211133,
+     "jobs": 35,
+     "uk_jobs": 17,
+     "uk_early_career": 0
+    }
+   ]
+  },
+  "plexe": {
+   "name": "Plexe",
+   "domain": "plexe.ai",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Spring 2025",
+    "stage": "Early",
+    "team_size": 2,
+    "top_company": false,
+    "is_hiring": true,
+    "industry": "B2B"
+   },
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "plexus": {
+   "name": "Plexus",
+   "domain": "plexus.im",
+   "seed_source": "yc",
+   "yc": {
+    "batch": "Winter 2018",
+    "stage": "Early",
+    "team_size": 3,
+    "top_company": false,
+    "is_hiring": false,
+    "industry": "Consumer"
+   },
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "plumery": {
+   "name": "Plumery",
+   "domain": "plumery.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "poindexterlabs": {
+   "name": "Poindexterlabs",
+   "domain": "poindexterlabs.net",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pointy": {
+   "name": "Pointy",
+   "domain": "pointy.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "pollentechnologies": {
+   "name": "Pollentechnologies",
+   "domain": "pollentechnologies.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "polyai": {
+   "name": "PolyAI",
+   "domain": "poly.ai",
+   "seed_source": "curated",
+   "note": "voice assistants, London",
+   "first_seen": 1790210781,
+   "status": "no_uk_postings",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "popsink": {
+   "name": "Popsink",
+   "domain": "popsink.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "portal": {
+   "name": "Portal",
+   "domain": "portal.octopusinvestments.com",
+   "seed_source": "vc:octopus",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "portalone": {
+   "name": "Portalone",
+   "domain": "portalone.com",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
+  },
+  "powernaut": {
+   "name": "Powernaut",
+   "domain": "powernaut.io",
+   "seed_source": "vc:seedcamp",
+   "first_seen": 1790210781,
+   "status": "unresolved",
+   "last_checked": 1790211133,
+   "score": 0
   }
  }
 }

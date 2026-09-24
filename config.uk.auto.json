@@ -208,6 +208,166 @@
         "score": 56,
         "uk_roles": 63
       }
+    },
+    {
+      "name": "Happl",
+      "type": "ashby",
+      "board_slug": "happl",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 53,
+        "uk_roles": 5
+      }
+    },
+    {
+      "name": "Healthtech 1",
+      "type": "ashby",
+      "board_slug": "Healthtech-1",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 53,
+        "uk_roles": 4
+      }
+    },
+    {
+      "name": "Humaans",
+      "type": "ashby",
+      "board_slug": "humaans",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 60,
+        "uk_roles": 12
+      }
+    },
+    {
+      "name": "Junction",
+      "type": "ashby",
+      "board_slug": "junction",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 51,
+        "uk_roles": 3
+      }
+    },
+    {
+      "name": "LemFi",
+      "type": "ashby",
+      "board_slug": "lemfi",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 55,
+        "uk_roles": 10
+      }
+    },
+    {
+      "name": "Lightdash",
+      "type": "ashby",
+      "board_slug": "lightdash",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 49,
+        "uk_roles": 1
+      }
+    },
+    {
+      "name": "Meticulous",
+      "type": "ashby",
+      "board_slug": "meticulous",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 60,
+        "uk_roles": 5
+      }
+    },
+    {
+      "name": "Mytos",
+      "type": "lever",
+      "company_slug": "mytos",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 64,
+        "uk_roles": 11
+      }
+    },
+    {
+      "name": "Permutive",
+      "type": "ashby",
+      "board_slug": "permutive",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 49,
+        "uk_roles": 1
+      }
+    },
+    {
+      "name": "Phase Biolabs",
+      "type": "ashby",
+      "board_slug": "phasebiolabs",
+      "countries": [
+        "GB"
+      ],
+      "role_profile": "startup",
+      "keyword_profile": "startup_early_career",
+      "discovered": {
+        "at": 1790211133,
+        "seed_source": "yc",
+        "score": 46,
+        "uk_roles": 1
+      }
     }
   ]
 }

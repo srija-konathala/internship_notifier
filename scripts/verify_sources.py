@@ -14,6 +14,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -52,7 +53,13 @@ def main() -> None:
     ap.add_argument("--config", default=str(ROOT / "config.json"))
     args = ap.parse_args()
 
-    config = watcher.load_config(args.config)
+    # Profiles and the location filter always come from config.json; --config
+    # only chooses which source list to check (e.g. config.uk.auto.json).
+    config = watcher.load_config(str(ROOT / "config.json"))
+    if Path(args.config).resolve() != (ROOT / "config.json").resolve():
+        with open(args.config, encoding="utf-8") as f:
+            config["sources"] = json.load(f).get("sources") or []
+
     sources = [s for s in config.get("sources") or [] if s.get("type") in watcher.FETCHERS]
     if args.region == "uk":
         sources = [s for s in sources if "GB" in (s.get("countries") or []) or s.get("skip_location_filter")]
